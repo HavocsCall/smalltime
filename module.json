@@ -3,12 +3,12 @@
   "title": "SmallTime",
   "description": "A small module for displaying and controlling the current time of day.",
   "version": "1.0.0",
-  "readme": "https://github.com/unsoluble/smalltime/blob/main/README.md",
-  "changelog": "https://github.com/unsoluble/smalltime/releases",
+  "readme": "https://github.com/HavocsCall/smalltime/blob/main/README.md",
+  "changelog": "https://github.com/HavocsCall/smalltime/releases",
   "authors": [
     {
-      "name": "unsoluble",
-      "discord": "unsoluble#5084"
+      "name": "HavocsCall",
+      "discord": "HavocsCall"
     }
   ],
   "compatibility": {
@@ -18,7 +18,7 @@
   "media": [
     {
       "type": "cover",
-      "url": "https://raw.githubusercontent.com/unsoluble/smalltime/main/doc/manifest-cover.webp",
+      "url": "https://raw.githubusercontent.com/HavocsCall/smalltime/main/doc/manifest-cover.webp",
       "caption": "SmallTime"
     },
     {
@@ -87,7 +87,7 @@
     }
   ],
   "socket": true,
-  "url": "https://github.com/unsoluble/smalltime",
-  "manifest": "https://github.com/unsoluble/smalltime/releases/latest/download/module.json",
-  "download": "https://github.com/unsoluble/smalltime/releases/download/1.0.0/module.zip"
+  "url": "https://github.com/HavocsCall/smalltime",
+  "manifest": "https://github.com/HavocsCall/smalltime/releases/latest/download/module.json",
+  "download": "https://github.com/HavocsCall/smalltime/releases/download/1.0.0/module.zip"
 }

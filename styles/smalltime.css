@@ -27,7 +27,7 @@
   flex-wrap: nowrap;
   background: none;
   height: var(--SMLTME-height);
-  max-width: 200px;
+  width: 275px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   opacity: var(--SMLTME-opacity);
   animation: fadeOut 3s ease-out;
@@ -101,7 +101,6 @@
   position: relative;
   top: 1px;
   left: -2px;
-  //text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
 }
 
 #smalltime-darkness-config {
@@ -149,22 +148,18 @@
   z-index: 0;
 }
 .sunrise-start-bounds {
-  // border: 1px solid red;
   left: 8px;
   width: 230px;
 }
 .sunrise-end-bounds {
-  // border: 1px solid green;
   left: 28px;
   width: 230px;
 }
 .sunset-start-bounds {
-  // border: 1px solid blue;
   left: 242px;
   width: 250px;
 }
 .sunset-end-bounds {
-  // border: 1px solid purple;
   left: 262px;
   width: 250px;
 }
@@ -254,6 +249,7 @@
 
 #smalltime-app .slider::-moz-range-track {
   -webkit-appearance: none;
+  appearance: none;
   height: 31px;
   width: 100%;
   background-color: transparent;
@@ -407,7 +403,7 @@
   padding-top: 4px;
   text-align: center;
   background: none;
-  width: 100%;
+  width: auto;
 }
 
 #smalltime-app .timeSeparator {

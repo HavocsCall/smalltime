@@ -142,6 +142,24 @@ Hooks.on('init', () => {
       20: '20',
       30: '30',
     },
+    default: 1,
+  });
+
+    game.settings.register('smalltime', 'medium-step', {
+    name: game.i18n.localize('SMLTME.Medium_Step'),
+    hint: game.i18n.localize('SMLTME.Medium_Step_Hint'),
+    scope: 'world',
+    config: true,
+    requiresReload: true,
+    type: Number,
+    choices: {
+      1: '1',
+      5: '5',
+      10: '10',
+      15: '15',
+      20: '20',
+      30: '30',
+    },
     default: 10,
   });
 
@@ -450,8 +468,10 @@ Hooks.on('renderSmallTimeApp', () => {
   if (!game.modules.get('smalltime').controlAuth) {
     document.documentElement.style.setProperty('--SMLTME-pointer-events', 'none');
     $('#decrease-large').addClass('hide-for-players');
+    $('#decrease-medium').addClass('hide-for-players');
     $('#decrease-small').addClass('hide-for-players');
     $('#increase-large').addClass('hide-for-players');
+    $('#increase-medium').addClass('hide-for-players');
     $('#increase-small').addClass('hide-for-players');
   }
   // Also manage the height of the app window to match the contents.
@@ -1008,6 +1028,7 @@ class SmallTimeApp extends FormApplication {
 
     // Handle the increment/decrement buttons.
     let smallStep = game.settings.get('smalltime', 'small-step');
+    let mediumStep = game.settings.get('smalltime', 'medium-step');
     let largeStep = game.settings.get('smalltime', 'large-step');
     let stepAmount;
 
@@ -1018,6 +1039,17 @@ class SmallTimeApp extends FormApplication {
         stepAmount = Math.floor(-Math.abs(smallStep / 2));
       } else {
         stepAmount = -Math.abs(smallStep);
+      }
+      this.timeRatchet(stepAmount);
+    });
+
+    html.find('#decrease-medium').on('click', () => {
+      if (event.shiftKey) {
+        stepAmount = -Math.abs(mediumStep * 2);
+      } else if (event.altKey) {
+        stepAmount = Math.floor(-Math.abs(mediumStep / 2));
+      } else {
+        stepAmount = -Math.abs(mediumStep);
       }
       this.timeRatchet(stepAmount);
     });
@@ -1040,6 +1072,17 @@ class SmallTimeApp extends FormApplication {
         stepAmount = Math.floor(smallStep / 2);
       } else {
         stepAmount = smallStep;
+      }
+      this.timeRatchet(stepAmount);
+    });
+
+    html.find('#increase-medium').on('click', () => {
+      if (event.shiftKey) {
+        stepAmount = mediumStep * 2;
+      } else if (event.altKey) {
+        stepAmount = Math.floor(mediumStep / 2);
+      } else {
+        stepAmount = mediumStep;
       }
       this.timeRatchet(stepAmount);
     });

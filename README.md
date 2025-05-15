@@ -1,6 +1,9 @@
 # SmallTime
 
-_A small module for displaying and controlling the current time of day._
+This is a fork of https://github.com/unsoluble/smalltime. HUGE thanks for them for all of the work that they put in.
+
+The purpose of this fork is just to add a third time step.
+https://github.com/unsoluble/smalltime/issues/226
 
 ## Quick Summary
 
@@ -68,8 +71,10 @@ Full support for:
 - Italian (thanks @bertolinimarco!)
 - Polish (thanks @Lioheart!)
 
+I added the medium step translation with google translate, please let me know if they are incorrect.
+
 I'm happy to accept and implement more translations!
 
 ### Need Help?
 
-If something's not working right, or you've got other questions or comments, feel free to hit me up on the [Discord](https://discord.gg/foundryvtt) (@unsoluble#5084), or file a [ticket](https://github.com/unsoluble/smalltime/issues).
+If something's not working right, or you've got other questions or comments, feel free to hit me up on the [Discord](https://discord.gg/foundryvtt) (@havocscall), or file a [ticket](https://github.com/HavocsCall/smalltime/issues).
